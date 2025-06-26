@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { OctagonAlertIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 
 
@@ -189,15 +190,25 @@ export const SignUpView = () => {
                                     <Button
                                     variant="outline"
                                     type="button"
+                                    onClick={() => {
+                                        authClient.signIn.social({
+                                            provider: "google",
+                                        })
+                                    }}
                                     className="w-full">
-                                        Google
+                                        <FaGoogle/>
 
                                     </Button>
                                     <Button
                                     variant="outline"
                                     type="button"
+                                    onClick={() => {
+                                        authClient.signIn.social({
+                                            provider: "github",
+                                        })
+                                    }}
                                     className="w-full">
-                                        Github
+                                        <FaGithub/>
 
                                     </Button>
                                 </div>
