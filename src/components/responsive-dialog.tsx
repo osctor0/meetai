@@ -27,7 +27,7 @@ interface ResponsiveDialogProps {
     onOpenChange: (open: boolean) => void;
 } 
 
-export const ResponsiveDialogProps = ({
+export const ResponsiveDialog = ({
     title,
     description,
     children,
